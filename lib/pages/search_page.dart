@@ -4,7 +4,6 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
@@ -22,13 +21,12 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 30),
                 Container(
                   child: Center(
                     child: Text(
                       'INDIA',
-                      style: TextStyle(fontSize: 40,
-                      color: Colors.red),
+                      style: TextStyle(fontSize: 40, color: Colors.red),
                     ),
                   ),
                 ),
@@ -37,7 +35,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Cases: 249',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
@@ -46,7 +44,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Today Cases: 55',
-                      style: TextStyle(fontSize: 15, color: Colors.blue),
+                      style: TextStyle(fontSize: 20, color: Colors.blue),
                     ),
                   ),
                 ),
@@ -55,7 +53,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Death : 5',
-                      style: TextStyle(fontSize: 15, color: Colors.redAccent),
+                      style: TextStyle(fontSize: 20, color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -73,7 +71,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Recovered : 23',
-                      style: TextStyle(fontSize: 15, color: Colors.green),
+                      style: TextStyle(fontSize: 20, color: Colors.green),
                     ),
                   ),
                 ),
@@ -82,7 +80,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Active Cases ',
-                      style: TextStyle(fontSize: 15, color: Colors.yellow),
+                      style: TextStyle(fontSize: 20, color: Colors.orange),
                     ),
                   ),
                 ),
@@ -91,7 +89,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Critical : 0',
-                      style: TextStyle(fontSize: 15, color: Colors.yellow),
+                      style: TextStyle(fontSize: 15, color: Colors.orange),
                     ),
                   ),
                 ),
@@ -100,7 +98,7 @@ class SearchPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Cases Per Million : 0',
-                      style: TextStyle(fontSize: 15, color: Colors.redAccent),
+                      style: TextStyle(fontSize: 20, color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -109,25 +107,22 @@ class SearchPage extends StatelessWidget {
                   decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide.none
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide(color: Colors.red)
-                      ),
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide(color: Colors.red)),
                       labelStyle: TextStyle(color: Colors.redAccent),
                       hintText: "Input Country"),
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: 200,
+                      width: 150,
                       child: RaisedButton(
                         onPressed: () {
-                          ///Go to Search Page
-                          Get.to(SearchPage());
+                          Get.back();
                         },
                         child: Text(
                           "Search",
@@ -137,7 +132,6 @@ class SearchPage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: 200,
                       child: RaisedButton(
                         onPressed: () {},
                         child: Text(
@@ -151,7 +145,7 @@ class SearchPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Container(
-                  width: 540,
+                  width: 300,
                   child: RaisedButton(
                     onPressed: () {},
                     child: Text(
